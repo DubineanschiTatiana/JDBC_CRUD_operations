@@ -15,8 +15,6 @@ public class BulkInsertSQLserverBulk {
         Statement statement = null;
         try {
             connection = DatabaseConnection.getInstance();
-            statement = connection.getConnection().createStatement();
-
             SQLServerBulkCSVFileRecord fileRecord = new SQLServerBulkCSVFileRecord(csvPath, null, ",", true);
 
             fileRecord.addColumnMetadata(1, null, Types.INTEGER, 0, 0);
